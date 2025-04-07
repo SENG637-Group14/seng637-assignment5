@@ -180,9 +180,13 @@ In real-world applications, companies set acceptable failure rates (e.g., 2 fail
 
 # Discussion on Similarity and Differences of the Two Techniques
 
-# How the team work/effort was divided and managed
+# How the team's work/effort was divided and managed
 
-# 
+The team worked collaboratively throughout the entire project, with each member contributing to different aspects. 
+
+The final report was a collaborative effort, with each team member contributing to different sections.
+
+**Communication & Collaboration**: Regular meetings (both in-person and virtual) and a shared online document kept the team updated on progress, and allowed us to address challenges together. This approach ensured effective communication and a smooth workflow throughout the project.
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
