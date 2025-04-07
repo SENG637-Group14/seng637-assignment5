@@ -38,18 +38,22 @@ These methods gave us insight into how reliable the system is and what areas may
 
 ### **2.1 Result of Model Comparison**
 
-We used C-SFRAT to estimate failure trends across all available models and covariate combinations. The goal was to identify the two models that best fit the observed failure data. We evaluated each model based on **Akaike Information Criterion (AIC)** and **Bayesian Information Criterion (BIC)** — both reward better fit and penalize complexity.
+We used C-SFRAT to estimate failure trends across all available models and covariate combinations. The goal was to identify the two models that best fit the observed failure data. We evaluated each model based on **Akaike Information Criterion (AIC)** and **Bayesian Information Criterion (BIC)**. They indicate a better balance between model fit and complexity:
+
+- **AIC (Akaike Information Criterion)**: Penalizes complexity mildly. Lower AIC means a better fit with fewer parameters.
+- **BIC (Bayesian Information Criterion)**: Penalizes complexity more strongly. Lower BIC indicates a simpler, more generalizable model.
 
 The top-performing models were:
 
-- **Discrete Weibull Type III with covariate F** — best AIC and BIC.
-- **Geometric with covariate F** — second best in both metrics.
+- **Discrete Weibull Type III with covariate F** - best AIC and BIC.
+- **Geometric with covariate F** - second best in both metrics.
 - 
-Below is a snapshot of the comparison result from the tool.
+Below is a snapshot of the comparison result from the tool. Highlighting best two models with the lowest AIC and BIC metrics.
 
-**Insert Image**: *Bar chart or table showing models ranked by AIC and BIC (DW3(F) and GM(F) on top).*
+<img src="media/1-Comparison for all models.png" alt="media/1-Comparison for all models.png" >
 
----
+*Figure 1: Table showing models' comparison*
+
 
 ### **2.2 Result of Range Analysis**
 
