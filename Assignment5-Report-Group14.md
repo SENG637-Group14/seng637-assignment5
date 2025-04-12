@@ -174,7 +174,42 @@ In real-world applications, companies set acceptable failure rates (e.g., 2 fail
 
 # Assessment Using Reliability Demonstration Chart 
 
-# 
+For this part of the lab, the RDC-11 tool was used to test the system under test (SUT). This tool is vital in quantifying how confident we can be in a model’s performance over time, especially when making decisions about model deployment or system integration.
+Before using the tool, the failure data had to be prepared.
+
+### Setup and Data Normalization
+
+The raw dataset provided from the lab had key reliability metrics like Failure Count (FC) and Execution Time (E), but the values were inconsistent and scattered across different time intervals. This inconsistency made it hard to generate a meaningful Reliability Demonstration Chart (RDC), as the failure events were not aligned in a clear cumulative format needed for proper analysis.
+
+To solve this, the data had to be normalized; specifically, by calculating:
+
+- Cumulative Failure Count
+- Cumulative Execution Time
+- 
+These values are essential for creating a smooth and interpretable RDC curve.
+
+### Code Reference
+
+The normalization was performed using a simple Python script.  
+📄 [rdc_normalization](./normalization.py)
+
+This script loads the data, computes cumulative values, and prepares it for plotting or analysis.
+
+### Output result for testing
+
+| T  | Cumulative FC | Cumulative Time |
+|----|----------------|------------------|
+| 1  | 2              | 0.05             |
+| 2  | 13             | 1.05             |
+| 3  | 15             | 1.24             |
+| 4  | 19             | 1.65             |
+| 5  | 22             | 1.97             |
+| 6  | 23             | 2.58             |
+| 7  | 24             | 2.90             |
+| 8  | 26             | 4.73             |
+| 9  | 30             | 7.74             |
+| 10 | 30             | 9.53             |
+
 
 # Comparison of Results
 
