@@ -14,25 +14,9 @@ In this lab report, our group analyzed failure data from a hypothetical system u
 We used "C-SFRAT" to track failure rates and reliability over time. Since the tool didn’t run properly on the Windows 10 PC that we used, we successfully ran it using **Oracle VM VirtualBox**. This hands-on experience helped us see the importance of reliability testing in real-world scenarios and better understand the tools used in the process.
 
 We explore two main techniques for assessing system reliability: Reliability Growth Testing and the Reliability Demonstration Chart (RDC). These methods help us evaluate the overall quality and dependability of the System Under Test (SUT) using the provided failure data.
-Here's how we broke it down:
 
-1. Techniques used:
    - Reliability Growth Testing
    - Reliability Demonstration Chart (RDC)
-
-2. What we analyzed:
-   - How long the system ran (T)
-   - How many failures were found (FC)
-   - Time spent running tests (E)
-   - Human effort to detect bugs (F)
-   - Computer time used (C)
-
-3. What we aimed to learn:
-   - How the system’s reliability improves
-   - How failure trends can guide decisions
-
-These methods gave us insight into how reliable the system is and what areas may need more attention.
-
 
 # Assessment Using Reliability Growth Testing 
 
