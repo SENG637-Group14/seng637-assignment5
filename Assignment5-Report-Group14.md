@@ -264,7 +264,7 @@ We tested different MTTF values using RDC to see how the system would respond. T
 
 When we tried **MTTF = 2**, the plot landed in the **yellow (continue) zone**, not fully accepted, but not rejected either. That made it the **lowest safe zone** we could aim for. Anything lower than 2 pushed us straight into the red, so *MTTF = 2 became our MTTFmin*.
 
-Yes, **MTTF = 4** gave a green pass, which is great, but that’s a much **stricter condition** fewer failures allowed over more time. It’s good for showing the system is solid, but not what we’d call the minimum threshold.
+Though **MTTF = 4** gave a green pass, which is great, but that’s a much **stricter condition** fewer failures allowed over more time. It’s good for showing the system is solid, but not what we’d call the minimum threshold.
 
 So in the end, we went with **MTTF = 2** as our baseline because:
 - It’s the lowest that doesn’t trigger rejection.
@@ -319,16 +319,18 @@ The final report was a collaborative effort, with each team member contributing 
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
+
 **Difficulties Encountered:**
 
 - The main challenge was running the reliability growth software, which wasn’t compatible with the test PC's current OS. This delayed the analysis.
 - Working with the raw data for RDC posed a challenge, as a result of the irregular data distribution of the output of the experiment wasn't making sense.
 
-  
+
 **Challenges Overcome:**
 
 - For RGT, we explored using a virtual machine (VM) to run the software in a compatible environment. This workaround allowed us to proceed with the analysis.
 - Converting raw failure data into a format suitable for RDC required careful normalization and cumulative calculations.
+
 
 **Lessons Learned:**
 
@@ -341,5 +343,4 @@ The final report was a collaborative effort, with each team member contributing 
 # Comments/feedback on the lab itself
 
 - The instructions and guidelines for this assignment were clear and well-structured, making it easier to understand and implement the test cases effectively.
-- The lab exercise provided valuable experience in mutation testing, using PITEST FOR coverage analysis, and executing structured GUI test cases using Selenium.
-
+- It provided an in-depth understanding and  hands-on experience in reliability assessment and system failure interpretation.
