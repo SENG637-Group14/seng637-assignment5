@@ -188,14 +188,15 @@ To solve this, the data had to be normalized; specifically, by calculating:
 - 
 These values are essential for creating a smooth and interpretable RDC curve.
 
-### Code Reference
+**Code Reference**
 
 The normalization was performed using a simple Python script.  
-📄 [rdc_normalization](./normalization.py)
+<a href="./normalization.py" target="_blank">📄 normalization.py</a>
+
 
 This script loads the data, computes cumulative values, and prepares it for plotting or analysis.
 
-### Output result for testing
+**Output result for testing**
 
 | T  | Cumulative FC | Cumulative Time |
 |----|----------------|------------------|
