@@ -67,7 +67,7 @@ To cross-check this range selection, we applied the **Laplace trend test** to de
 
 <img src="media/4-Laplace.png" alt="media/4-Laplace.png" >
 
-*Figure 3: Line plot of Laplace factor across intervals — highlight transition from negative to near-zero around interval 19–21.*
+*Figure 3: Line plot of Laplace factor across intervals — highlighting transition from negative to near-zero around interval 19–21.*
 
 
 ### 2.3 Plots for Failure Rate and Reliability of the SUT for the Test Data Provided
