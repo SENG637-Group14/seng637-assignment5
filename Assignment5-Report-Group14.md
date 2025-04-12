@@ -286,8 +286,28 @@ So in the end, we went with **MTTF = 2** as our baseline because:
 - The tool may only accept a small number of data points.
 
 # Comparison of Results
+Both test tools require failure data to test the reliability of the system. In Part 1 - using C-SFRAT, we found that the system required further testing to improve its reliability, as the calculated MTTF was above the acceptable threshold. In Part 2 - using RDC, the analysis similarly indicated that the system did not meet the predefined reliability standard, with failure rates exceeding acceptable limits. However, RDC provided a clear visual representation of failure points in the Accept, Continue, and Reject regions, while RGT helped model and predict future failure scenarios.
 
-# Discussion on Similarity and Differences of the Two Techniques
+Both methods agreed that system improvements were needed, though RGT focused on iterative improvements, while RDC gave a snapshot of whether the system met reliability goals.
+
+# Discussion on Similarities and Differences of the Two Techniques
+
+**Similarities:**
+
+Both techniques assess system reliability using failure data.
+
+Data quality is crucial for accurate results.
+
+The goal is continuous reliability improvement.
+
+**Differences:**
+
+RGT is iterative, refining the system over multiple test phases; RDC provides a final evaluation of whether reliability targets are met.
+
+RGT is more flexible, predicting reliability across tests, while RDC is rigid, evaluating a system’s compliance at a specific moment.
+
+RGT focuses on failure modes, while RDC is used for final validation against predefined targets.
+
 
 # How the team's work/effort was divided and managed
 
