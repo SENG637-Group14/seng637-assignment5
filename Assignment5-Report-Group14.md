@@ -177,7 +177,7 @@ In real-world applications, companies set acceptable failure rates (e.g., 2 fail
 For this part of the lab, the RDC-11 tool was used to test the system under test (SUT). This tool is vital in quantifying how confident we can be in a model’s performance over time, especially when making decisions about model deployment or system integration.
 Before using the tool, the failure data had to be prepared.
 
-### Setup and Data Normalization
+## Setup and Data Normalization
 
 The raw dataset provided from the lab had key reliability metrics like Failure Count (FC) and Execution Time (E), but the values were inconsistent and scattered across different time intervals. This inconsistency made it hard to generate a meaningful Reliability Demonstration Chart (RDC), as the failure events were not aligned in a clear cumulative format needed for proper analysis.
 
@@ -211,43 +211,54 @@ This script loads the data, computes cumulative values, and prepares it for plot
 | 10 | 30             | 9.53             |
 
 
-### 3 plots for MTTFmin, twice and half of it for your test data
+## 3 plots for MTTFmin, twice and half of it for your test data
 
 We explored three scenarios by tweaking the MTTF (Mean Time To Failure) values:
 
-1. Minimum MTTF that Makes the System Acceptable
-We found that when the system is allowed to have 4 failures in 7 hours (MTTF = 7/4), it falls neatly in the acceptance region.
+**1. Minimum MTTF that Makes the System Acceptable**
+
+MTTF = 2
+Scenario: Allowed 4 failures over 8 hours (MTTF = 2).
+
+Result: The system landed in the continue (yellow) region, meaning it wasn't fully accepted but didn’t fail outright either.
+
+Under moderate failure tolerance, the system showed some promise but not full reliability.
 
 <img src="media/8-MTTF-2.png" alt="media/2-MTTF-2.png" >
 
+*Figure 7: MTTFmin set to two(2)*
 
-📌 Insert Image (from Specimen 6)
-Image: RDC plot at MTTF = 7/4 (Figure 13)
-Label as: "RDC plot where system barely meets reliability requirement (MTTF = 1.75 hrs)"
 
-2. Double the Minimum MTTF
-When we doubled the MTTF to 14 hours, the system no longer passed the test—it fell into the reject zone, which makes sense. A stricter reliability standard reveals more failures.
+**2. Double the Minimum MTTF**
+
+MTTF = 4
+Scenario: Required 1 failure every 4 hours (MTTF = 4).
+
+Result: Points moved into the accept (green) region, indicating the system met this stricter requirement.
+
+Surprisingly, the system performed better under a higher MTTF, suggesting a good reliability trend in this test.
 
 <img src="media/9-MTTF_Doubled.png" alt="media/9-MTTF_Doubled.png" >
 
-📌 Insert Image (from Specimen 6)
-Image: RDC plot at MTTF = 14 hours (Figure 14)
-Label as: "Stricter reliability requirement puts system in reject region"
+*Figure 8: MTTF Value Doubled*
 
-3. Half the Minimum MTTF
-Halving the MTTF (i.e., allowing more failures in less time, 8 in 7 hours) pushed the system even further into the accept region. This shows the system is only considered reliable under very lenient failure conditions.
 
+**3. Half the Minimum MTTF**
+
+MTTF = 1
+Scenario: Allowed 7 failures in 7 hours (MTTF = 1).
+
+Result: Performance dropped back to the yellow region.
+
+This shows the system struggles with too lenient failure allowances, possibly due to how failures cluster in time.
+   
 <img src="media/10-MTTF_Halfed.png" alt="media/10-MTTF_Halfed.png" >
 
-📌 Insert Image (from Specimen 6)
-Image: RDC plot at MTTF = 8/7 (Figure 15)
-Label as: "Lenient failure rate makes system appear highly reliable"
+*Figure 9: MTTF Value Halfed*
 
-Absolutely! Here's your rephrased section using a **collective noun tone**, just like you'd say it—clear, confident, and to the point:
 
----
 
-**Explain your evaluation and justification of how you decide the MTTFmin**
+## Explain your evaluation and justification of how you decide the MTTFmin
 
 We tested different MTTF values using RDC to see how the system would respond. The idea was to find the **lowest MTTF** that still keeps the system from getting rejected.
 
@@ -260,6 +271,19 @@ So in the end, we went with **MTTF = 2** as our baseline because:
 - It marks the line between unreliable and *maybe acceptable*.
 - It gives the system a fair chance without setting the bar too high.
 
+
+### Advantages and Disadvantages of the Reliability Demonstration Chart (RDC)
+
+**Advantages**
+- Shows the system’s reliability at a glance.
+- Simple to interpret once the failure data is ready.
+- Helps avoid extra testing by stopping early when a clear result is reached.
+- Useful for determining product readiness.
+
+**Disadvantages**
+- Only shows if the system meets the threshold, not how reliable it actually is.
+- If input values are wrong, the results can be misleading.
+- The tool may only accept a small number of data points.
 
 # Comparison of Results
 
