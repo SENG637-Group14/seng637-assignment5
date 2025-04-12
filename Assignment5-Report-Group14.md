@@ -202,6 +202,7 @@ We explored three scenarios by tweaking the MTTF (Mean Time To Failure) values:
 **1. Minimum MTTF that Makes the System Acceptable**
 
 MTTF = 2
+
 Scenario: Allowed 4 failures over 8 hours (MTTF = 2).
 
 Result: The system landed in the continue (yellow) region, meaning it wasn't fully accepted but didn’t fail outright either.
@@ -216,6 +217,7 @@ Under moderate failure tolerance, the system showed some promise but not full re
 **2. Double the Minimum MTTF**
 
 MTTF = 4
+
 Scenario: Required 1 failure every 4 hours (MTTF = 4).
 
 Result: Points moved into the accept (green) region, indicating the system met this stricter requirement.
@@ -230,6 +232,7 @@ Surprisingly, the system performed better under a higher MTTF, suggesting a good
 **3. Half the Minimum MTTF**
 
 MTTF = 1
+
 Scenario: Allowed 7 failures in 7 hours (MTTF = 1).
 
 Result: Performance dropped back to the yellow region.
