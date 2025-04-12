@@ -191,8 +191,7 @@ These values are essential for creating a smooth and interpretable RDC curve.
 **Code Reference**
 
 The normalization was performed using a simple Python script.  
-<a href="https://github.com/SENG637-Group14/seng637-assignment5/blob/main/normalization.py" target="_blank">📄 normalization.py</a>
-
+📄 [normalization.py](./normalization.py)
 
 This script loads the data, computes cumulative values, and prepares it for plotting or analysis.
 
@@ -210,6 +209,56 @@ This script loads the data, computes cumulative values, and prepares it for plot
 | 8  | 26             | 4.73             |
 | 9  | 30             | 7.74             |
 | 10 | 30             | 9.53             |
+
+
+### 3 plots for MTTFmin, twice and half of it for your test data
+
+We explored three scenarios by tweaking the MTTF (Mean Time To Failure) values:
+
+1. Minimum MTTF that Makes the System Acceptable
+We found that when the system is allowed to have 4 failures in 7 hours (MTTF = 7/4), it falls neatly in the acceptance region.
+
+<img src="media/8-MTTF-2.png" alt="media/2-MTTF-2.png" >
+
+
+📌 Insert Image (from Specimen 6)
+Image: RDC plot at MTTF = 7/4 (Figure 13)
+Label as: "RDC plot where system barely meets reliability requirement (MTTF = 1.75 hrs)"
+
+2. Double the Minimum MTTF
+When we doubled the MTTF to 14 hours, the system no longer passed the test—it fell into the reject zone, which makes sense. A stricter reliability standard reveals more failures.
+
+<img src="media/9-MTTF_Doubled.png" alt="media/9-MTTF_Doubled.png" >
+
+📌 Insert Image (from Specimen 6)
+Image: RDC plot at MTTF = 14 hours (Figure 14)
+Label as: "Stricter reliability requirement puts system in reject region"
+
+3. Half the Minimum MTTF
+Halving the MTTF (i.e., allowing more failures in less time, 8 in 7 hours) pushed the system even further into the accept region. This shows the system is only considered reliable under very lenient failure conditions.
+
+<img src="media/10-MTTF_Halfed.png" alt="media/10-MTTF_Halfed.png" >
+
+📌 Insert Image (from Specimen 6)
+Image: RDC plot at MTTF = 8/7 (Figure 15)
+Label as: "Lenient failure rate makes system appear highly reliable"
+
+Absolutely! Here's your rephrased section using a **collective noun tone**, just like you'd say it—clear, confident, and to the point:
+
+---
+
+**Explain your evaluation and justification of how you decide the MTTFmin**
+
+We tested different MTTF values using RDC to see how the system would respond. The idea was to find the **lowest MTTF** that still keeps the system from getting rejected.
+
+When we tried **MTTF = 2**, the plot landed in the **yellow (continue) zone**, not fully accepted, but not rejected either. That made it the **lowest safe zone** we could aim for. Anything lower than 2 pushed us straight into the red, so *MTTF = 2 became our MTTFmin*.
+
+Yes, **MTTF = 4** gave a green pass, which is great, but that’s a much **stricter condition** fewer failures allowed over more time. It’s good for showing the system is solid, but not what we’d call the minimum threshold.
+
+So in the end, we went with **MTTF = 2** as our baseline because:
+- It’s the lowest that doesn’t trigger rejection.
+- It marks the line between unreliable and *maybe acceptable*.
+- It gives the system a fair chance without setting the bar too high.
 
 
 # Comparison of Results
