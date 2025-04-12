@@ -185,13 +185,13 @@ To solve this, the data had to be normalized; specifically, by calculating:
 
 - Cumulative Failure Count
 - Cumulative Execution Time
-- 
+ 
 These values are essential for creating a smooth and interpretable RDC curve.
 
 **Code Reference**
 
 The normalization was performed using a simple Python script.  
-<a href="./normalization.py" target="_blank">📄 normalization.py</a>
+<a href="[./normalization.py](https://github.com/SENG637-Group14/seng637-assignment5/blob/main/normalization.py)" target="_blank">📄 normalization.py</a>
 
 
 This script loads the data, computes cumulative values, and prepares it for plotting or analysis.
