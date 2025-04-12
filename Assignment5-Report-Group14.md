@@ -295,7 +295,7 @@ RGT focuses on failure modes, while RDC is used for final validation against pre
 
 # How the team's work/effort was divided and managed
 
-The team worked collaboratively throughout the entire project, with each member contributing to different aspects. 
+The team worked collaboratively, with each member contributing to different aspects. 
 
 The final report was a collaborative effort, with each team member contributing to different sections.
 
