@@ -47,7 +47,7 @@ The top-performing models were:
 
 - **Discrete Weibull Type III with covariate F** - best AIC and BIC.
 - **Geometric with covariate F** - second best in both metrics.
-- 
+  
 Below is a snapshot of the comparison result from the tool. Highlighting the best two models with the lowest AIC and BIC metrics.
 
 <img src="media/1-Comparison for all models.png" alt="media/1-Comparison for all models.png" >
